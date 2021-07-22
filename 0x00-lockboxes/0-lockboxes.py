@@ -4,16 +4,21 @@ Each box is numbered sequentially from 0 to n - 1 and
 each box may contain keys to the other boxes. """
 
 
+#!/usr/bin/python3
+
+
 def canUnlockAll(boxes):
-    """ You have n number of locked boxes in front of you.
-    Each box is numbered sequentially from 0 to n - 1 and
-    each box may contain keys to the other boxes. """
-    for key in range(1, len(boxes) - 1):
-        ctr = False
-        for idx in range(len(boxes)):
-            ctr = (key in boxes[idx] and key != idx)
-            if ctr:
-                break
-        if ctr is False:
-            return ctr
-    return True
+    if (type(boxes) is not list):
+        return False
+
+    if (len(boxes) == 0):
+        return False
+
+    keys = [0]
+    for i in keys:
+        for j in boxes[i]:
+            if j not in keys and j != i and j < len(boxes) and j != 0:
+                keys.append(j)
+    if len(keys) == len(boxes):
+        return True
+    return False
