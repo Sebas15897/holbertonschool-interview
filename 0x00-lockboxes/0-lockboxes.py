@@ -4,7 +4,7 @@ sequentially from 0 to n - 1 and each box may contain keys to the other boxes. "
 
 
 def canUnlockAll(boxes):
-    """ Write a method that determines if all the boxes can be opened."""
+    """Write a method that determines if all the boxes can be opened."""
     for key in range(1, len(boxes) - 1):
         ctr = False
         for idx in range(len(boxes)):
