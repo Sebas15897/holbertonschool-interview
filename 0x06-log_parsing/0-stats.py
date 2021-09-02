@@ -57,4 +57,3 @@ if __name__ == '__main__':
         print_data()
         raise
     print_data()
-
