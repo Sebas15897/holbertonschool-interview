@@ -10,8 +10,10 @@ import sys
 def board_set_up(N):
     """
     Sets up blank NxN chessboard
+
     parameters:
         N [int]: represents the size of the board
+
     board is initialized to 0s
     """
     matrix = []
@@ -26,8 +28,10 @@ def board_set_up(N):
 def print_solution(matrix):
     """
     Prints the coordinates where there is a queen
+
     parameters:
         matrix [list of lists]: represents the NxN chessboard
+
     queens indicated by 1 in matrix
     coordinates printed as list of lists
     """
@@ -45,6 +49,7 @@ def print_solution(matrix):
 def is_safe(matrix, new_row, new_column):
     """
     Determines if a queen is safe to be put in new_row, new_column
+
     parameters:
         matrix [list of lists]: represents the NxN chessboard
         new_row [int]: row coordinate for potential new queen
@@ -71,6 +76,7 @@ def is_safe(matrix, new_row, new_column):
 def solve(matrix, new_column):
     """
     Recursively solves the N Queens puzzle
+
     parameters:
         matrix [list of lists]: represents NxN chessboard
         new_column [int]: column to test for new queen
